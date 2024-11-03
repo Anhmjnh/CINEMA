@@ -1,0 +1,212 @@
+    html, body {
+        height: 100%; /* Chiều cao 100% của khung nhìn */
+        margin: 0; /* Xóa khoảng cách mặc định của trình duyệt */
+        padding: 0; /* Xóa khoảng cách mặc định của trình duyệt */
+        font-family: Arial, sans-serif; /* Đặt phông chữ mặc định */
+    }
+
+    body {
+        background-color: blueviolet;   
+        background-size: cover; /* Chiếm toàn bộ không gian */
+        background-position: center; /* Căn giữa hình nền */
+        background-repeat: no-repeat; /* Không lặp lại hình nền */
+        background-attachment: fixed; /* Hình nền cố định khi cuộn */
+    }
+
+    header {
+        display: flex; /* Sử dụng Flexbox để bố trí */
+        justify-content: space-between; /* Khoảng cách đều giữa các phần tử */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        padding: 10px 20px; /* Padding cho header */
+        background-color: rgba(0, 0, 0, 0.7); /* Nền bán trong suốt */
+        width: 100%; /* Chiều rộng 100% */
+        top: 0; /* Đặt ở trên cùng */
+        z-index: 1000; /* Đảm bảo ở trên cùng so với các phần tử khác */
+        flex-wrap: wrap; /* Cho phép các phần tử xuống dòng nếu không đủ không gian */
+    }
+
+    .logo {
+        flex: 1; /* Chiếm không gian còn lại */
+    }
+
+    .logo img {
+        height: 100px; /* Chiều cao logo */
+    }
+
+    .actions {
+        display: flex; /* Sử dụng Flexbox */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        gap: 20px; /* Khoảng cách giữa các nút */
+        flex: 2; /* Chiếm không gian lớn hơn */
+        justify-content: center; /* Căn giữa */
+    }
+
+    .btn-yellow {
+        background-color: #ff0; /* Màu nền vàng */
+        color: #000; /* Màu chữ đen */
+        padding: 10px 20px; /* Padding cho nút */
+        border: none; /* Không viền */
+        cursor: pointer; /* Con trỏ thành hình tay khi hover */
+        border-radius: 100px; 
+        overflow: hidden;
+    }
+
+    .btn-yellow:hover {
+        background-color: #54a2f0; /* Đổi màu khi hover */
+    }
+
+    .btn-purple {
+        background-color: #800080; /* Màu nền tím */
+        color: #fff; /* Màu chữ trắng */
+        padding: 10px 20px; /* Padding cho nút */
+        border: none; /* Không viền */
+        cursor: pointer; /* Con trỏ thành hình tay khi hover */
+        border-radius: 100px;
+        overflow: hidden;
+    }
+
+    .btn-purple:hover {
+        background-color: rgb(239, 135, 31);
+    }
+
+    .search-container {
+        position: relative; /* Vị trí tương đối để chứa biểu tượng tìm kiếm */
+        display: flex; /* Sử dụng Flexbox */
+        align-items: center; /* Căn giữa theo chiều dọc */
+    }
+
+    .search-bar {
+        padding: 8px; /* Padding cho thanh tìm kiếm */
+        border-radius: 5px; /* Bo tròn góc */
+        border: 1px solid #ccc; /* Viền xám nhạt */
+        width: 200px; /* Chiều rộng của thanh tìm kiếm */
+        padding-left: 30px; /* Padding bên trái để tạo khoảng cách cho biểu tượng tìm kiếm */
+    }
+    .search-icon {
+        position: absolute; /* Vị trí tuyệt đối trong container */
+        left: 10px; /* Khoảng cách từ bên trái */
+        font-size: 16px; /* Kích thước chữ */
+        color: #888; /* Màu xám cho biểu tượng */
+    }
+
+    .btn-login {
+        background: none; /* Không nền */
+        color: white; /* Màu chữ trắng */
+        padding: 10px 20px; /* Padding cho nút */
+        border: none; /* Không viền */
+        cursor: pointer; /* Con trỏ thành hình tay khi hover */
+        font-size: 16px; /* Kích thước chữ */
+        display: flex; /* Sử dụng Flexbox */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        gap: 5px; /* Khoảng cách giữa các phần tử bên trong */
+    }
+
+    .btn-login:hover {
+        color: #ff0; /* Thay đổi màu chữ khi hover */
+    }
+
+    .btn-register {
+        background: none; /* Không nền */
+        color: white; /* Màu chữ trắng */
+        padding: 10px 20px; /* Padding cho nút */
+        border: none; /* Không viền */
+        cursor: pointer; /* Con trỏ thành hình tay khi hover */
+        font-size: 16px; /* Kích thước chữ */
+    }
+
+    .btn-register:hover {
+        color: #ff0; /* Thay đổi màu chữ khi hover */
+    }
+
+    .separator {
+        color: white; /* Màu chữ trắng */
+        padding: 0 10px; /* Padding bên trái và bên phải */
+        font-size: 16px; /* Kích thước chữ */
+    }
+
+    nav {
+        width: 100%; 
+        background-color: rgba(0, 0, 0, 0.9); /* Nền bán trong suốt */
+        padding: 10px 0; /* Padding cho nav */
+        position: relative; /* Vị trí tương đối */
+        z-index: 999; /* Đảm bảo nằm dưới header */
+    }
+
+    .main-nav {
+        list-style: none; /* Không có dấu chấm đầu dòng */
+        display: flex; /* Sử dụng Flexbox */
+        justify-content: center; /* Căn giữa */
+        gap: 20px; /* Khoảng cách giữa các mục */
+        margin: 0; /* Xóa margin mặc định */
+        padding: 0; /* Xóa padding mặc định */
+    }
+
+    .main-nav li a {
+        color: #fff; /* Màu chữ trắng */
+        text-decoration: none; /* Không gạch chân */
+        padding: 10px; /* Padding cho liên kết */
+        border-radius: 5px; /* Bo tròn góc */
+        transition: background-color 0.3s; /* Hiệu ứng chuyển đổi cho nền */
+    }
+
+    .main-nav li a:hover {
+        background-color: rgba(255, 255, 255, 0.2); 
+    }
+
+    .advertisements {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 50px 0;
+        gap: 20px; /* Khoảng cách giữa các ảnh */
+    }
+
+    .advertisement {
+        position: relative;
+        width: 600px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .advertisement img {
+        width: 100%;
+        height: auto;
+    }
+
+    .content {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        text-align: left;
+    }
+
+    .content h1 {
+        color:yellow;   
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .content p {
+        
+        margin: 5px 0;
+        font-size: 18px;
+    }
+
+    .btn-book {
+        background-color: yellow;
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .btn-book:hover {
+        background-color: purple;
+        color: white;
+    }
